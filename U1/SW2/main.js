@@ -28,8 +28,8 @@ if (Notification.permission === 'default') {
 // Botón para lanzar notificación local
 document.getElementById('btnNotification').addEventListener("click", () => {
     if(navigator.serviceWorker.controller){
-        navigator.serviceWorker.controller.PostMessage("mostrar-notificación");
+        navigator.serviceWorker.controller.postMessage("mostrar-notificación");
     } else {
-        alert("El Service Worker aún no está activo.");
+        console.log("El Service Worker aún no está activo.");
     }
 });

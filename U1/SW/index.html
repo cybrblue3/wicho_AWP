@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Service Worker</title>
-    <link rel="stylesheet" href="styles.css">
+ <title>Service Worker</title>
+ <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <h1>Ejemplo de Service Worker</h1>
     <p>Este sitio funciona sin conexión</p>
     <img src="logo.png" alt="Logo de app" width="150">
     <button id="check">Ver estado del SW</button>
-    <button type="button" src="/.index.html">Main Menu</button>
-    <!-- Archivo cliente que registra y comunica hacia el SW -->
-    <script src="app.js"></script>
+    <button type="button" onclick="window.location.href='/index.html';">Main Menu</button>
+     <!-- O puedes usar este: -->
+    <!-- <a href="/index.html" class="btn">Main Menu</a> -->
+  <script src="app.js"></script>
 </body>
 </html>
