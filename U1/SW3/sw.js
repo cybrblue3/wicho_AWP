@@ -24,7 +24,7 @@ self.addEventListener('fetch', event => {
                 console.log("V3 got the response...", response);
 
                 // **1st   from cache or fetched if not
-                return response || fetch(event.request);
+                // return response || fetch(event.request);
 
                 // **2nd target specific request object and respond with different data but same type
                 // if (event.request.url === 'https://127.0.0.1:5500/rocket.jpg') {
@@ -49,8 +49,7 @@ self.addEventListener('fetch', event => {
 
                 // **4th return other site (MUST BE NON CORS-BLOCKED) instead of the initial index.html
                 // return fetch('https://www.perplexity.ai/')   //****BAD EXMPL
-                // return fetch('https://jsonplaceholder.typicode.com/todos/1')  //****GOOD EXMPL
-                
+                return fetch('https://jsonplaceholder.typicode.com/todos/1')  //****GOOD EXMPL
                 // **5th return an empty RESPONSE object or a RESPONSE object with data inside
                 // return new Response('Hola, esta es una nueva respuesta!!!');
 
