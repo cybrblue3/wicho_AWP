@@ -1,0 +1,91 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f5f7fa;
+  color: #232e35;
+  min-height: 100vh;
+}
+
+.index-header {
+  background: url('Hamilton.png') center/cover no-repeat;
+}
+
+header {
+  background: #2a3a4c;
+  color: #fff;
+  padding: 24px 12px 20px 12px;
+  text-align: center;
+}
+
+.logo {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 8px;
+  box-shadow: 0 2px 10px rgba(34,34,34,0.10); /* Optional: adds a soft shadow */
+  border: 2px solid #fff; /* Optional: adds a white border for contrast */
+}
+
+
+
+nav {
+  margin: 0;
+  padding: 16px 0;
+  background: #fafbfc;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(30,50,150,0.06);
+}
+
+nav a {
+  display: inline-block;
+  margin: 0 12px;
+  padding: 8px 24px;
+  color: #2a3a4c;
+  background: #e1ecf4;
+  text-decoration: none;
+  border-radius: 20px;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+nav a:hover {
+  background: #d1e1f4;
+  color: #346af7;
+}
+
+main {
+  max-width: 600px;
+  margin: 40px auto 0 auto;
+  padding: 0 18px 32px 18px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(40,60,100,0.1);
+}
+
+.hero {
+  width: 100%;
+  max-height: 240px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 18px;
+}
+
+button {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 18px;
+  background: #346af7;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: #2a3a4c;
+}
