@@ -9,7 +9,8 @@ const cacheAssets = [
     'offline.html',
     'styles.css',
     'main.js',
-    'icono.png'
+    'icono.png',
+    'service-worker.js'
 ];
 
 // Instalación del Service Worker
@@ -47,7 +48,7 @@ self.addEventListener('activate', (event) => {
 // Escuchar mensajes desde la página
 self.addEventListener('message', (event) => {
     console.log('SW recibio:', event.data);
-    if (event.data === 'mostrar-notificacion') {
+    if (event.data === 'mostrar-notificación') {
         self.ServiceWorkerRegistration.showNotification('Notificación Local.'
             , {
                 body: 'Esta es una prueba de notificación sin servidor push.',
