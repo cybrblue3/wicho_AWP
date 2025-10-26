@@ -49,7 +49,7 @@ self.addEventListener('activate', (event) => {
 self.addEventListener('message', (event) => {
     console.log('SW recibio:', event.data);
     if (event.data === 'mostrar-notificación') {
-        self.Registration.showNotification('Notificación Local.'
+        self.registration.showNotification('Notificación Local.'
             , {
                 body: 'Esta es una prueba de notificación sin servidor push.',
                 icon: 'icono.png'
