@@ -2,121 +2,84 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>U1. Actividad 1 v2025</title>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+  <title>Media PWA – Units</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       margin: 0;
-      padding: 40px;
-      background: #f7f7f7;
-      color: #222;
       min-height: 100vh;
-    }
-    
-    .container {
-      max-width: 500px;
-      margin: 0 auto;
-    }
-    
-    .profile-container {
-      background: #fff;
-      border-radius: 8px;
-      padding: 32px;
-      margin-bottom: 24px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.11);
-    }
-    
-    .profile-title {
-      font-size: 2rem;
-      margin-bottom: 16px;
-      color: #0051a8;
-      text-align: center;
-    }
-    
-    .profile-info {
-      margin: 12px 0;
-      font-size: 1.1rem;
-      padding: 4px 0;
-    }
-    
-    .nav-container {
-      background: #fff;
-      border-radius: 8px;
-      padding: 20px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.11);
-    }
-    
-    .nav-container nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
       display: flex;
-      gap: 12px;
+      align-items: center;
       justify-content: center;
+      background: #0f172a;
+      color: #e5e7eb;
     }
-    
-    .nav-container nav li {
-      margin: 0;
+    .container {
+      max-width: 480px;
+      width: 100%;
+      padding: 2rem;
+      border-radius: 1rem;
+      background: #020617;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+      border: 1px solid #1f2937;
     }
-    
-    .nav-container nav a {
+    h1 {
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+      font-size: 1.6rem;
+    }
+    p {
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+      color: #9ca3af;
+    }
+    .links {
+      display: grid;
+      gap: 0.75rem;
+    }
+    a.unit-link {
       display: block;
-      padding: 12px 24px;
-      background: #0051a8;
-      color: #fff;
+      padding: 0.9rem 1.1rem;
+      border-radius: 0.7rem;
+      background: #111827;
+      color: #e5e7eb;
       text-decoration: none;
-      border-radius: 6px;
-      font-weight: 500;
-      letter-spacing: 1px;
-      transition: all 0.3s ease;
-      min-width: 60px;
-      text-align: center;
+      border: 1px solid #1f2937;
+      transition: background 0.15s ease, border-color 0.15s ease, transform 0.1s ease;
     }
-    
-    .nav-container nav a:hover,
-    .nav-container nav a:focus {
-      background: #003e83;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0,81,168,0.3);
+    a.unit-link:hover {
+      background: #1f2937;
+      border-color: #4b5563;
+      transform: translateY(-1px);
     }
-    
-    @media (max-width: 600px) {
-      body {
-        padding: 20px;
-      }
-      
-      .nav-container nav ul {
-        flex-direction: column;
-        gap: 8px;
-      }
-      
-      .nav-container nav a {
-        min-width: auto;
-      }
+    .unit-title {
+      font-weight: 600;
+      margin-bottom: 0.2rem;
+    }
+    .unit-desc {
+      font-size: 0.85rem;
+      color: #9ca3af;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="profile-container">
-      <div class="profile-title">Actividad 1</div>
-      <div class="profile-info"><strong>Full Name:</strong> Luis Eduardo Solis Landeros</div>
-      <div class="profile-info"><strong>School ID:</strong> 22307067</div>
-      <div class="profile-info"><strong>Email:</strong> 22307067@utcgg.edu.mx</div>
-      <div class="profile-info"><strong>Program:</strong> DGS</div>
-      <div class="profile-info"><strong>Four month period:</strong> 10th</div>
+  <main class="container">
+    <h1>Media PWA – Units</h1>
+    <p>Select a unit to open its exercises.</p>
+    <div class="links">
+      <a class="unit-link" href="./U1/">
+        <div class="unit-title">Unit 1 – Service Workers</div>
+        <div class="unit-desc">Examples: SW, SW2, SW3, SW4.</div>
+      </a>
+      <a class="unit-link" href="./U2/">
+        <div class="unit-title">Unit 2 – Media PWA</div>
+        <div class="unit-desc">Camera, microphone, vibration, and ringtone PWA.</div>
+      </a>
     </div>
-    
-    <div class="nav-container">
-      <nav>
-        <ul>
-          <li><a href="/U1/SW/">SW</a></li>
-          <li><a href="/U1/SW2/">SW2</a></li>
-        </ul>
-      </nav>
-    </div>
-  </div>
+  </main>
 </body>
 </html>
-
