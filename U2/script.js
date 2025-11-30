@@ -8,10 +8,10 @@ const ASSETS = [
     'styles.css',
     'app.js',
     'manifest.webmanifest',
-    './icons/icon-192.png',
-    './icons/icon-512.png',
-    './icons/maskable-192.png',
-    './icons/maskable-512.png'
+    'icons/icon-192.png',
+    'icons/icon-512.png',
+    'icons/maskable-192.png',
+    'icons/maskable-512.png'
 ];
 
 //evento que se ejecuta cuando el SW se instala por primera vez
