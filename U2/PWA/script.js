@@ -4,10 +4,10 @@ const CACHE_NAME = 'Media-PWA-v1';
 //archivos que se almacerean en cache
 const ASSETS = [
     './',
-    './index.html',
-    './styles.css',
-    './app.js',
-    './manifest.webmanifest',
+    'index.html',
+    'styles.css',
+    'app.js',
+    'manifest.webmanifest',
     './icons/icon-192.png',
     './icons/icon-512.png',
     './icons/maskable-192.png',
