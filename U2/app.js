@@ -10,13 +10,13 @@ const $ = (sel) => document.querySelector(sel); // Corregido 'sell' por 'sel'
 const video = $('#video'); // Etiqueta donde se muestra el video
 const canvas = $('#canvas'); // Contenedor de capturar fotos
 const photos = $('#photos'); // Corregido '$photos' por '#photos'
-const audios = $('#audio');
+const audios = $('#audios');
 const btnStartCam = $('#btnStartCam');
 const btnStopCam = $('#btnStopCam'); // Faltaba definir esta variable usada más abajo
 const btnFlip = $('#btnFlip'); // Corregido 'btnFLip' a 'btnFlip' por consistencia
 const btnTorch = $('#btnTorch');
 const btnShot = $('#btnShot');
-const videoDevice = $('#videoDevice'); // Select para dispositivos
+const videoDevices = $('#videoDevices'); // Select para dispositivos
 const btnStartRec = $('#btnStartRec');
 const btnStopRec = $('#btnStopRec');
 const recStatus = $('#recStatus');
@@ -162,7 +162,7 @@ btnShot.addEventListener('click', () => {
         // Enlace de descarga
         const a = document.createElement('a');
         a.href = url;
-        a.download = foto-`${Date.now()}`.png;
+        a.download = `foto-${Date.now()}.png`;
         a.textContent = 'Descargar foto'; // Corregido 'Descarhar'
         a.className = 'btn';
 
