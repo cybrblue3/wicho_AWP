@@ -1,5 +1,5 @@
 // Nombre de la cache
-const CACHE_NAME = 'Media-PWA-v1';
+const CACHE_NAME = 'Media-PWA-v2';
 
 // Archivos que se almacenarán en cache
 // Rutas relativas a /U2/, porque sw.js vive en /U2/
@@ -9,10 +9,16 @@ const ASSETS = [
   'styles.css',
   'app.js',
   'manifest.webmanifest',
+  'favicon.png',
+  'icons/apple-touch-icon-180.png',
   'icons/icon-192.png',
+  'icons/icon-256.png',
+  'icons/icon-384.png',
   'icons/icon-512.png',
   'icons/maskable-192.png',
-  'icons/maskable-512.png'
+  'icons/maskable-512.png',
+  'assets/old_phone_ring.mp3',
+  'assets/old_phone_ring.ogg'
 ];
 
 // Evento que se ejecuta cuando el SW se instala por primera vez
@@ -57,8 +63,8 @@ self.addEventListener('fetch', (event) => {
 
       return fresh;
     } catch (err) {
-      // Si la red falla, devuelve lo que haya en cache o un error
-      return cached || Response.error();
+      // Si la red falla y no hay cache, devuelve un error
+      return Response.error();
     }
   })());
 });

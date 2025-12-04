@@ -30,8 +30,20 @@ const btnRingtone = $('#btnRingtone');
 
 const btnInstall = $('#btnInstall');
 
-// Audio para el ringtone (ajusta ruta/nombre si hace falta)
-const ringtone = new Audio('/U2/assets/ringtone.mp3');
+// Audio para el ringtone con fallback de formatos
+const ringtone = new Audio();
+ringtone.innerHTML = `
+  <source src="/U2/assets/old_phone_ring.mp3" type="audio/mpeg">
+  <source src="/U2/assets/old_phone_ring.ogg" type="audio/ogg">
+`;
+// Preferir MP3 si el navegador lo soporta, sino intentar con OGG
+if (ringtone.canPlayType('audio/mpeg')) {
+  ringtone.src = '/U2/assets/old_phone_ring.mp3';
+} else if (ringtone.canPlayType('audio/ogg')) {
+  ringtone.src = '/U2/assets/old_phone_ring.ogg';
+} else {
+  ringtone.src = '/U2/assets/old_phone_ring.mp3'; // Fallback por defecto
+}
 
 // ------------------- PWA Install -------------------
 window.addEventListener('beforeinstallprompt', (e) => {
